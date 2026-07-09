@@ -1,2 +1,6 @@
-# steinbra.github.io
-Official website for Steinar Braaten's ski-jump and video analysis software.
+# Steinar Braaten
+
+Official website for ski-jump biomechanics and video analysis software.
+
+Website:
+https://steinbran.github.io
