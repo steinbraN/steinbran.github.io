@@ -1,132 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Steinar Braaten – Ski Jump Analysis Software</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #111;
-      color: #f2f2f2;
-      line-height: 1.6;
-    }
-    header {
-      padding: 70px 24px;
-      text-align: center;
-      background: linear-gradient(135deg, #111, #222);
-    }
-    h1 {
-      font-size: 42px;
-      margin: 0 0 12px;
-    }
-    h2 {
-      margin-top: 0;
-    }
-    .subtitle {
-      color: #aaa;
-      font-size: 20px;
-    }
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 40px 24px;
-    }
-    .card {
-      background: #1c1c1e;
-      border: 1px solid #333;
-      border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 24px;
-    }
-    .tag {
-      display: inline-block;
-      background: #2d6cdf;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-    a {
-      color: #7ab7ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      color: #888;
-      padding: 40px 24px;
-      border-top: 1px solid #333;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steinar Braaten – Ski Jump Analysis Software</title>
+<style>
+:root {
+  --bg: #0b0d12;
+  --card: #171a21;
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --line: #2a2f3a;
+  --blue: #4f8cff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1d2430 0, #0b0d12 45%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 22px;
+}
+
+nav a:hover { color: white; }
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 24px 70px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.05;
+  margin: 0 0 20px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 22px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px 70px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: rgba(23, 26, 33, 0.88);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+
+.card h2 {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(79,140,255,.16);
+  color: #9fc0ff;
+  border: 1px solid rgba(79,140,255,.35);
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.section {
+  margin-top: 42px;
+}
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.muted { color: var(--muted); }
+
+.links a {
+  display: inline-block;
+  margin-right: 18px;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 34px 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--muted);
+  margin: 0 12px;
+  text-decoration: none;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Steinar Braaten</h1>
-  <div class="subtitle">Ski jump and video analysis software</div>
-</header>
+<nav>
+  <strong>Steinar Braaten</strong>
+  <div>
+    <a href="#apps">Apps</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Ski Jump Biomechanics & Video Analysis</h1>
+  <p>
+    macOS software for synchronized ski jump video comparison,
+    biomechanics visualization, motion analysis, and coaching workflows.
+  </p>
+</section>
 
 <main class="container">
 
-  <section class="card">
-    <span class="tag">macOS</span>
-    <h2>sjTrAnalyse</h2>
-    <p>
-      sjTrAnalyse analyzes and compares synchronized ski jump videos using biomechanics data generated from AI pose estimation.
-    </p>
-    <p>
-      The app visualizes joint angles, balance, and rotation to support coaching, research, and athlete development.
-    </p>
+  <section id="apps" class="grid">
+
+    <div class="card">
+      <span class="badge">macOS</span>
+      <h2>sjTrAnalyse</h2>
+      <p class="muted">
+        Analyze and compare synchronized ski jump videos using biomechanics
+        data generated from AI pose estimation.
+      </p>
+      <p>
+        Visualize joint angles, balance, and rotation to support coaching,
+        research, and athlete development.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="badge">macOS</span>
+      <h2>sjCropVideo</h2>
+      <p class="muted">
+        Prepare, crop, level, and export video clips for sports and motion
+        analysis workflows.
+      </p>
+      <p>
+        Designed to help create cleaner video material before analysis and
+        tracking.
+      </p>
+    </div>
+
+    <div class="card">
+      <span class="badge">Coming soon</span>
+      <h2>sjTracker</h2>
+      <p class="muted">
+        AI-based pose estimation and motion tracking for ski jump videos.
+      </p>
+      <p>
+        Designed to generate motion data for use in sjTrAnalyse.
+      </p>
+    </div>
+
   </section>
 
-  <section class="card">
-    <span class="tag">macOS</span>
-    <h2>sjCropVideo</h2>
-    <p>
-      sjCropVideo prepares, crops, levels, and exports video clips for sports and motion analysis workflows.
-    </p>
-  </section>
-
-  <section class="card">
-    <span class="tag">Coming soon</span>
-    <h2>sjTracker</h2>
-    <p>
-      sjTracker will generate motion tracking data from ski jump videos using AI-based pose estimation.
-    </p>
-  </section>
-
-  <section class="card">
+  <section class="section card">
     <h2>Support</h2>
-    <p>
-      For support, questions, or feedback, contact:
+    <p class="muted">
+      For support, questions, feedback, or App Store related inquiries:
     </p>
     <p>
       <a href="mailto:steinbra@me.com">steinbra@me.com</a>
     </p>
   </section>
 
-  <section class="card">
-    <h2>Privacy Policy</h2>
-    <p>
-      sjTrAnalyse does not collect, transmit, store, or share personal information.
-    </p>
-    <p>
-      All video and CSV processing is performed locally on the user's Mac. No files are uploaded to any server.
-    </p>
-    <p>
-      The app does not use analytics, advertising, or tracking technologies.
-    </p>
-  </section>
-
 </main>
 
 <footer>
-  © 2026 Steinar Braaten
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy Policy</a>
+  <span>© 2026 Steinar Braaten</span>
 </footer>
 
 </body>
