@@ -1,0 +1,1 @@
+Place the four app icon PNG files in this folder. Recommended size: 1024 x 1024 pixels.
