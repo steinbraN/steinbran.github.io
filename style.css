@@ -212,15 +212,20 @@ a { color: inherit; }
 }
 
 .status {
-  width: fit-content;
-  margin-top: auto;
-  padding: 6px 10px;
-  border: 1px solid var(--green-line);
-  border-radius: 999px;
-  color: var(--green);
-  background: var(--green-bg);
-  font-size: 0.78rem;
-  font-weight: 780;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    background: #0a84ff;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.status:hover {
+    background: #0066d6;
 }
 
 .privacy-panel {
