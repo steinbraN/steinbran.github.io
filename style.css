@@ -161,6 +161,12 @@ a { color: inherit; }
     linear-gradient(180deg, rgba(35, 47, 69, 0.98), rgba(19, 27, 40, 0.98));
 }
 
+.app-card--centered {
+  grid-column: 1 / -1;
+  width: calc((100% - 20px) / 2);
+  justify-self: center;
+}
+
 .app-icon {
   width: 100px;
   height: 100px;
@@ -226,6 +232,17 @@ a { color: inherit; }
 
 .status:hover {
     background: #0066d6;
+}
+
+.status--pending {
+  margin-top: auto;
+  color: var(--muted);
+  text-align: center;
+  background: rgba(148, 163, 184, 0.14);
+}
+
+.status--pending:hover {
+  background: rgba(148, 163, 184, 0.14);
 }
 
 .privacy-panel {
@@ -407,6 +424,11 @@ a { color: inherit; }
 
   .app-card {
     min-height: 330px;
+  }
+
+  .app-card--centered {
+    grid-column: auto;
+    width: 100%;
   }
 
   .site-footer {
