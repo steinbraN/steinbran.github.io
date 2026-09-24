@@ -43,10 +43,9 @@
 
   <section class="section" id="apps">
 
+    <div class="section-heading"><h2>iOS apps</h2></div>
     <div class="apps-grid">
-
-
-      <!-- sjRecorder -->
+<!-- sjRecorder -->
 
       <div
         class="app-card"
@@ -94,9 +93,44 @@
 
       </div>
 
+<!-- sjReplay -->
+      <div
+        class="app-card"
+        id="sjReplay"
+        role="link"
+        tabindex="0"
+        onclick="location.href='sjReplay.html'"
+        onkeydown="if(event.key === 'Enter') location.href='sjReplay.html'"
+      >
+        <div class="app-icon">
+          <span>R</span>
+          <img
+            src="sjReplay.png"
+            alt="sjReplay app icon"
+            width="100"
+            height="100"
+            onerror="this.remove()"
+          >
+        </div>
 
+        <div class="card-label">Replay · iPhone</div>
+        <h3>sjReplay</h3>
+        <p>
+          Automatically capture ski-jump training and replay each take-off
+          in slow motion. Hands-free recording and looping replays on iPhone.
+        </p>
+        <a class="status" href="https://apps.apple.com/app/id6807857691"
+          target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+          View in App Store
+        </a>
+      </div>
+    </div>
+  </section>
 
-      <!-- sjCropVideo -->
+  <section class="section" aria-labelledby="mac-apps-heading">
+    <div class="section-heading"><h2 id="mac-apps-heading">macOS apps</h2></div>
+    <div class="apps-grid">
+<!-- sjCropVideo -->
 
       <div
         class="app-card"
@@ -144,9 +178,7 @@
 
       </div>
 
-
-
-      <!-- sjTracker -->
+<!-- sjTracker -->
 
       <div
         class="app-card"
@@ -194,9 +226,7 @@
 
       </div>
 
-
-
-      <!-- sjTrAnalyse -->
+<!-- sjTrAnalyse -->
 
       <div
         class="app-card"
@@ -244,9 +274,7 @@
 
       </div>
 
-
-
-      <!-- sjConsistency -->
+<!-- sjConsistency -->
 
       <div class="app-card">
 
@@ -288,38 +316,6 @@
 </a>
 
       </div>
-
-      <!-- sjReplay -->
-      <div
-        class="app-card"
-        id="sjReplay"
-        role="link"
-        tabindex="0"
-        onclick="location.href='sjReplay.html'"
-        onkeydown="if(event.key === 'Enter') location.href='sjReplay.html'"
-      >
-        <div class="app-icon">
-          <span>R</span>
-          <img
-            src="sjReplay.png"
-            alt="sjReplay app icon"
-            width="100"
-            height="100"
-            onerror="this.remove()"
-          >
-        </div>
-
-        <div class="card-label">Replay · iPhone</div>
-        <h3>sjReplay</h3>
-        <p>
-          Automatically capture ski-jump training and replay each take-off
-          in slow motion. Hands-free recording and looping replays on iPhone.
-        </p>
-        <span class="status status--pending" style="margin-top: 1rem;">
-          Coming soon
-        </span>
-      </div>
-
     </div>
 
   </section>
