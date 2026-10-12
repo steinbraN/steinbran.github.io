@@ -4,7 +4,8 @@ STEINBRAN.GITHUB.IO WEBSITE
 Files included:
 - index.html
 - style.css
-- sjRecorder.html
+- sjRecLevel.html
+- sjRecorder.html (redirect to sjRecLevel.html)
 - sjCropVideo.html
 - sjTracker.html
 - sjTrAnalyse.html
